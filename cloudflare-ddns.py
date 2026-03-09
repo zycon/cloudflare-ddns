@@ -62,7 +62,7 @@ def getIPs():
     if ipv4_enabled:
         try:
             a = requests.get(
-                "https://api.ipify.org/").text()
+                "https://api.ipify.org/").text
             
         except Exception:
             global shown_ipv4_warning
@@ -72,7 +72,7 @@ def getIPs():
             # Try secondary IP check
             try:
                 a = requests.get(
-                    "https://api.ipify.org/").text()
+                    "https://api.ipify.org/").text
             except Exception:
                 global shown_ipv4_warning_secondary
                 if not shown_ipv4_warning_secondary:
